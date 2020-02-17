@@ -1,0 +1,11 @@
+<h1>NEW GAME</h1>
+<%= @grid %>
+
+<form action="/score" method="post">
+  <input type="text" name="attempt" placeholder="answer">
+  <input name="grid" type="hidden" value='<% @grid %>'>
+  <input type="submit">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+</form>
+
+
